@@ -4,3 +4,5 @@ Hello, world!
 TESTTING
 
 Goodbye, world!
+
+Edsgar W. Dijkstra
