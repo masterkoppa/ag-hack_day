@@ -35,8 +35,8 @@ h1
 
 #card .page
 {
-    width:5in;
-    height:7in;
+    width:480px;
+    height:672px;
     position:absolute;
 }
 
@@ -48,28 +48,39 @@ h1
 #card #page1
 {
     margin-left:5in;
+    background-image:url('../Images/frnt_cover.png')
 }
 
 #card #page2
 {
     visibility:hidden;
+    background-image:url('../Images/Birthday_Card_inner_left.png')
 }
 
 #card #page3
 {
     margin-left:5in;
     visibility:hidden;
+    background-image:url('../Images/Birthday_Card_inner_right.png')
 }
 
 #card #page4
 {
     visibility:hidden;
+    background-image:url('../Images/Birthday_Card_bg.png')
 }
 
 #card #page5
 {
     margin-left:5in;
     visibility:hidden;
+    background-image:url('../Images/Birthday_Card_bg.png')
+}
+
+#card #page6
+{
+    visibility:hidden;
+    background-image:url('../Images/Birthday_Card_bg.png')
 }
 
 #card .subheader
