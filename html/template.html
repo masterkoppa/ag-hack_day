@@ -52,10 +52,16 @@
                                         <input type="text" id="header_field" oninput="update_header(getPageNum())" value=""/>
                                     </dd>
                                     <dt>
-                                        Font
+                                        Text Properties
                                     </dt>
                                     <dd>
-                                        FONTS
+                                        <div class="btn-toolbar">
+                                        <div class="btn-group">
+                                         
+                                        <a class="btn" href="#" onclick="bold(this, 'header')"><i class="icon-bold"></i></a>
+                                        <a class="btn" href="#" onclick="italic(this, 'header')"><i class="icon-italic"></i></a>
+                                        </div>
+                                        </div>
                                     </dd>
                                     <dt>
                                         Color
@@ -82,11 +88,17 @@
                                     <input type="text" id="subheader_field" oninput="update_subheader(getPageNum())" value=""/>
                                 </dd>
                                 <dt>
-                                    Font
-                                </dt>
-                                <dd>
-                                    FONTS
-                                </dd>
+                                        Text Properties
+                                    </dt>
+                                    <dd>
+                                        <div class="btn-toolbar">
+                                        <div class="btn-group">
+                                         
+                                        <a class="btn" href="#" onclick="bold(this, 'subheader')"><i class="icon-bold"></i></a>
+                                        <a class="btn" href="#" onclick="italic(this, 'subheader')"><i class="icon-italic"></i></a>
+                                        </div>
+                                        </div>
+                                    </dd>
                                 <dt>
                                     Color
                                 </dt>
@@ -179,29 +191,15 @@
         </div>
         <div class="pagination center">
             <ul>
-                <li><a href="#" onclick="page_left()">Prev</a></li>
-                <li><a href="#" onclick="updatePageNum(1)">1</a></li>
-                <li><a href="#" onclick="page_right()">Next</a></li>
+                <li><a href="#" id="page_prev" onclick="page_left()">Prev</a></li>
+                <li><a href="#" id="page_btn1" onclick="updatePageNum(1)">1</a></li>
+                <li><a href="#" id="page_btn2" onclick="updatePageNum(2)">2</a></li>
+                <li><a href="#" id="page_btn3" onclick="updatePageNum(3)">3</a></li>
+                <li><a href="#" id="page_btn4" onclick="updatePageNum(4)">4</a></li>
+                <li><a href="#" id="page_btn5" onclick="updatePageNum(5)">5</a></li>
+                <li><a href="#" id="page_btn6" onclick="updatePageNum(6)">6</a></li>
+                <li><a href="#" id="page_next" onclick="page_right()">Next</a></li>
             </ul>
-        </div>
-        <div id="config_area" align="center">
-            <span id="page_num_label">Page number to edit: </span>
-            <form id="page_num_form" action="">
-                <input type="radio" name="page_num" value="1" onchange="updatePageNum(1)" checked>1
-                <input type="radio" name="page_num" value="2" onchange="updatePageNum(2)">2
-                <input type="radio" name="page_num" value="3" onchange="updatePageNum(3)">3 <br/>
-                <input type="radio" name="page_num" value="4" onchange="updatePageNum(4)">4
-                <input type="radio" name="page_num" value="5" onchange="updatePageNum(5)">5
-                <input type="radio" name="page_num" value="6" onchange="updatePageNum(6)">6
-            </form>
-            <span id="media_label">Media path: </span>
-            <!--<input type="file" id="image_fileupload" onchange="upload_image(getPageNum())" />-->
-            
-            <br/>
-            <input type="button" id="page_left" onclick="page_left()" value="<<" />
-            &nbsp;&nbsp;&nbsp;
-            <input type="button" id="page_right" onclick="page_right()" value=">>" />
-            <br/>
         </div>
         <br/>
 
@@ -246,16 +244,65 @@
                 $("#upload_progress .bar").css('visibility', 'visible');
             }
         });
+
+        updatePageNum(1);
     });
     $("#flat1").spectrum({
         flat: true,
-        showInput: true
+        showInput: true,
+        move: function(color){
+            color_header(color.toHexString(), getPageNum());
+        }
     });
     $("#flat2").spectrum({
         flat: true,
-        showInput: true
+        showInput: true,
+        move: function(color){
+            color_subheader(color.toHexString(), getPageNum());
+        }
     });
-    $("subheader_field").value = "";
+
+    function bold(button, type){
+        if($(button).attr('class').indexOf("active") == -1){
+            $(button).addClass("active");
+            page = getPageNum();
+            if(type.indexOf("sub") == -1){
+                bold_header(page);
+            }else{
+                bold_subheader(page);
+            }
+        }else{
+            $(button).removeClass("active");
+            page = getPageNum();
+            if(type.indexOf("sub") == -1){
+                unbold_header(page);
+            }else{
+                unbold_subheader(page);
+            }
+        }
+    }
+
+    function italic(button, type){
+        if($(button).attr('class').indexOf("active") == -1){
+            $(button).addClass("active");
+            page = getPageNum();
+            if(type.indexOf("sub") == -1){
+                italic_header(page);
+            }else{
+                italic_subheader(page);
+            }
+            
+        }else{
+            $(button).removeClass("active");
+            page = getPageNum();
+            if(type.indexOf("sub") == -1){
+                unitalic_header(page);
+            }else{
+                unitalic_subheader(page);
+            }
+        }
+    }
+    
     </script>
 
 	</body>

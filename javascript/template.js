@@ -32,6 +32,246 @@ var page_num;
 var page_num_form;
 var editing_area;
 
+function bold_header(page_num){
+    switch(page_num)
+    {
+        case 1:
+            $(page1_header).addClass('bold');
+            break;
+        case 2:
+            $(page2_header).addClass('bold');
+            break;
+        case 3:
+            $(page3_header).addClass('bold');
+            break;
+        case 4:
+            $(page4_header).addClass('bold');
+            break;
+        case 5:
+            $(page5_header).addClass('bold');
+            break;
+        case 6:
+            $(page6_header).addClass('bold');
+            break;
+    }
+}
+
+function unbold_header(page_num){
+    switch(page_num)
+    {
+        case 1:
+            $(page1_header).removeClass('bold');
+            break;
+        case 2:
+            $(page2_header).removeClass('bold');
+            break;
+        case 3:
+            $(page3_header).removeClass('bold');
+            break;
+        case 4:
+            $(page4_header).removeClass('bold');
+            break;
+        case 5:
+            $(page5_header).removeClass('bold');
+            break;
+        case 6:
+            $(page6_header).removeClass('bold');
+            break;
+    }
+}
+
+function italic_header(page_num){
+    switch(page_num)
+    {
+        case 1:
+            $(page1_header).addClass('italic');
+            break;
+        case 2:
+            $(page2_header).addClass('italic');
+            break;
+        case 3:
+            $(page3_header).addClass('italic');
+            break;
+        case 4:
+            $(page4_header).addClass('italic');
+            break;
+        case 5:
+            $(page5_header).addClass('italic');
+            break;
+        case 6:
+            $(page6_header).addClass('italic');
+            break;
+    }
+}
+
+function unitalic_header(page_num){
+    switch(page_num)
+    {
+        case 1:
+            $(page1_header).removeClass('italic');
+            break;
+        case 2:
+            $(page2_header).removeClass('italic');
+            break;
+        case 3:
+            $(page3_header).removeClass('italic');
+            break;
+        case 4:
+            $(page4_header).removeClass('italic');
+            break;
+        case 5:
+            $(page5_header).removeClass('italic');
+            break;
+        case 6:
+            $(page6_header).removeClass('italic');
+            break;
+    }
+}
+
+function color_header(newColor, page_num){
+    switch(page_num)
+    {
+        case 1:
+            $(page1_header).css({color: newColor});
+            break;
+        case 2:
+            $(page2_header).css({color: newColor});
+            break;
+        case 3:
+            $(page3_header).css({color: newColor});
+            break;
+        case 4:
+            $(page4_header).css({color: newColor});
+            break;
+        case 5:
+            $(page5_header).css({color: newColor});
+            break;
+        case 6:
+            $(page6_header).css({color: newColor});
+            break;
+    }
+}
+
+function bold_subheader(page_num){
+    switch(page_num)
+    {
+        case 1:
+            $(page1_subheader).addClass('bold');
+            break;
+        case 2:
+            $(page2_subheader).addClass('bold');
+            break;
+        case 3:
+            $(page3_subheader).addClass('bold');
+            break;
+        case 4:
+            $(page4_subheader).addClass('bold');
+            break;
+        case 5:
+            $(page5_subheader).addClass('bold');
+            break;
+        case 6:
+            $(page6_subheader).addClass('bold');
+            break;
+    }
+}
+
+function unbold_subheader(page_num){
+    switch(page_num)
+    {
+        case 1:
+            $(page1_subheader).removeClass('bold');
+            break;
+        case 2:
+            $(page2_subheader).removeClass('bold');
+            break;
+        case 3:
+            $(page3_subheader).removeClass('bold');
+            break;
+        case 4:
+            $(page4_subheader).removeClass('bold');
+            break;
+        case 5:
+            $(page5_subheader).removeClass('bold');
+            break;
+        case 6:
+            $(page6_subheader).removeClass('bold');
+            break;
+    }
+}
+
+function italic_subheader(page_num){
+    switch(page_num)
+    {
+        case 1:
+            $(page1_subheader).addClass('italic');
+            break;
+        case 2:
+            $(page2_subheader).addClass('italic');
+            break;
+        case 3:
+            $(page3_subheader).addClass('italic');
+            break;
+        case 4:
+            $(page4_subheader).addClass('italic');
+            break;
+        case 5:
+            $(page5_subheader).addClass('italic');
+            break;
+        case 6:
+            $(page6_subheader).addClass('italic');
+            break;
+    }
+}
+
+function unitalic_subheader(page_num){
+    switch(page_num)
+    {
+        case 1:
+            $(page1_subheader).removeClass('italic');
+            break;
+        case 2:
+            $(page2_subheader).removeClass('italic');
+            break;
+        case 3:
+            $(page3_subheader).removeClass('italic');
+            break;
+        case 4:
+            $(page4_subheader).removeClass('italic');
+            break;
+        case 5:
+            $(page5_subheader).removeClass('italic');
+            break;
+        case 6:
+            $(page6_subheader).removeClass('italic');
+            break;
+    }
+}
+
+function color_subheader(newColor, page_num){
+    switch(page_num)
+    {
+        case 1:
+            $(page1_subheader).css({color: newColor});
+            break;
+        case 2:
+            $(page2_subheader).css({color: newColor});
+            break;
+        case 3:
+            $(page3_subheader).css({color: newColor});
+            break;
+        case 4:
+            $(page4_subheader).css({color: newColor});
+            break;
+        case 5:
+            $(page5_subheader).css({color: newColor});
+            break;
+        case 6:
+            $(page6_subheader).css({color: newColor});
+            break;
+    }
+}
+
 // Modifies the header for the given page (1 indexed) as characters are typed in the corresponding field
 function update_header(page_num)
 {
@@ -114,34 +354,141 @@ function updatePageNum(num)
     switch(page_num)
     {
         case 1:
+            page1.style.visibility = "visible";
+            page2.style.visibility = "hidden";
+            page3.style.visibility = "hidden";
+            page4.style.visibility = "hidden";
+            page5.style.visibility = "hidden";
+            page6.style.visibility = "hidden";
+
+            $("#page_btn1").addClass('active');
+            $("#page_btn2").removeClass('active');
+            $("#page_btn3").removeClass('active');
+            $("#page_btn4").removeClass('active');
+            $("#page_btn5").removeClass('active');
+            $("#page_btn6").removeClass('active');
+
+            $("#page_next").removeClass("disabled");
+            $("#page_prev").addClass("disabled");
+
             header_field.value = page1_header.innerHTML;
             subheader_field.value = page1_subheader.innerHTML;
             media_fileupload.value = page1_media.innerHTML;
+            
             break;
         case 2:
+            page1.style.visibility = "hidden";
+            page2.style.visibility = "visible";
+            page3.style.visibility = "visible";
+            page4.style.visibility = "hidden";
+            page5.style.visibility = "hidden";
+            page6.style.visibility = "hidden";
+
+            $("#page_btn1").removeClass('active');
+            $("#page_btn2").addClass('active');
+            $("#page_btn3").removeClass('active');
+            $("#page_btn4").removeClass('active');
+            $("#page_btn5").removeClass('active');
+            $("#page_btn6").removeClass('active');
+
+            $("#page_next").removeClass("disabled");
+            $("#page_prev").removeClass("disabled");
+
             header_field.value = page2_header.innerHTML;
             subheader_field.value = page2_subheader.innerHTML;
             media_fileupload.value = page2_media.innerHTML;
             break;
         case 3:
+            page1.style.visibility = "hidden";
+            page2.style.visibility = "visible";
+            page3.style.visibility = "visible";
+            page4.style.visibility = "hidden";
+            page5.style.visibility = "hidden";
+            page6.style.visibility = "hidden";
+
+            $("#page_btn1").removeClass('active');
+            $("#page_btn3").addClass('active');
+            $("#page_btn2").removeClass('active');
+            $("#page_btn4").removeClass('active');
+            $("#page_btn5").removeClass('active');
+            $("#page_btn6").removeClass('active');
+
+            $("#page_next").removeClass("disabled");
+            $("#page_prev").removeClass("disabled");
+
             header_field.value = page3_header.innerHTML;
             subheader_field.value = page3_subheader.innerHTML;
             media_fileupload.value = page3_media.innerHTML;
             break;
         case 4:
+            page1.style.visibility = "hidden";
+            page2.style.visibility = "hidden";
+            page3.style.visibility = "hidden";
+            page4.style.visibility = "visible";
+            page5.style.visibility = "visible";
+            page6.style.visibility = "hidden";
+
+            $("#page_btn1").removeClass('active');
+            $("#page_btn4").addClass('active');
+            $("#page_btn3").removeClass('active');
+            $("#page_btn2").removeClass('active');
+            $("#page_btn5").removeClass('active');
+            $("#page_btn6").removeClass('active');
+
+            $("#page_next").removeClass("disabled");
+            $("#page_prev").removeClass("disabled");
+
             header_field.value = page4_header.innerHTML;
             subheader_field.value = page4_subheader.innerHTML;
             media_fileupload.value = page4_media.innerHTML;
             break;
         case 5:
+            page1.style.visibility = "hidden";
+            page2.style.visibility = "hidden";
+            page3.style.visibility = "hidden";
+            page4.style.visibility = "visible";
+            page5.style.visibility = "visible";
+            page6.style.visibility = "hidden";
+
+            $("#page_btn1").removeClass('active');
+            $("#page_btn5").addClass('active');
+            $("#page_btn3").removeClass('active');
+            $("#page_btn4").removeClass('active');
+            $("#page_btn2").removeClass('active');
+            $("#page_btn6").removeClass('active');
+
+            $("#page_next").removeClass("disabled");
+            $("#page_prev").removeClass("disabled");
+
             header_field.value = page5_header.innerHTML;
             subheader_field.value = page5_subheader.innerHTML;
             media_fileupload.value = page5_media.innerHTML;
             break;
+
         case 6:
+            page1.style.visibility = "hidden";
+            page2.style.visibility = "hidden";
+            page3.style.visibility = "hidden";
+            page4.style.visibility = "hidden";
+            page5.style.visibility = "hidden";
+            page6.style.visibility = "visible";
+
+            $("#page_btn1").removeClass('active');
+            $("#page_btn6").addClass('active');
+            $("#page_btn3").removeClass('active');
+            $("#page_btn4").removeClass('active');
+            $("#page_btn5").removeClass('active');
+            $("#page_btn2").removeClass('active');
+
+            $("#page_next").addClass("disabled");
+            $("#page_prev").removeClass("disabled");
+
+
             header_field.value = page6_header.innerHTML;
             subheader_field.value = page6_subheader.innerHTML;
             media_fileupload.value = page6_media.innerHTML;
+
+            break;
     }
 
 }
@@ -203,56 +550,22 @@ function drop(ev)
 // Function called on left "page flip" in edit mode
 function page_left()
 {
-    if(editing_area != 1)
-    {
-        editing_area--;
-        if(editing_area == 1)
-        {
-            page2.style.visibility = "hidden";
-            page3.style.visibility = "hidden";
-            page1.style.visibility = "visible";
-        }
-        if(editing_area == 2)
-        {
-            page4.style.visibility = "hidden";
-            page5.style.visibility = "hidden";
-            page2.style.visibility = "visible";
-            page3.style.visibility = "visible";
-        }
-        if(editing_area == 3)
-        {
-            page6.style.visibility = "hidden";
-            page4.style.visibility = "visible";
-            page5.style.visibility = "visible";
-        }
+    page = getPageNum();
+    if(page != 1){
+        console.log("Page Left");
+        updatePageNum(page - 1);
+        
     }
 }
 
 // Function called on right "page flip" in edit mode
 function page_right()
 {
-    if(editing_area != 4)
-    {
-        editing_area++;
-        if(editing_area == 2)
-        {
-            page1.style.visibility = "hidden";
-            page2.style.visibility = "visible";
-            page3.style.visibility = "visible";
-        }
-        if(editing_area == 3)
-        {
-            page2.style.visibility = "hidden";
-            page3.style.visibility = "hidden";
-            page4.style.visibility = "visible";
-            page5.style.visibility = "visible";
-        }
-        if(editing_area == 4)
-        {
-            page4.style.visibility = "hidden";
-            page5.style.visibility = "hidden";
-            page6.style.visibility = "visible";
-        }
+    page = getPageNum();
+    if(page != 6){
+        console.log("Page Right");
+        updatePageNum(page + 1);
+        
     }
 }
 
