@@ -29,7 +29,7 @@
         </div>
         <div class="ui_outside">
         <div class="row">
-            <div class="span4 sidebar">
+            <div class="span3 sidebar">
                 Color
                 <br/>
                 Header Settings
@@ -39,8 +39,8 @@
                 Media Settings
                 <br/>
             </div>
-            <div class="span8 edit_area">
-                        <div id='card'>
+            <div class="span9 edit_area">
+            <div id='card'>
             <div id='page1' ondrop="drop(event)" ondragover="allowDrop(event)" class="page">
                 <div class="page_border">
                     <span id="page1_header" class="dragndrop_elem header" draggable="true" ondragstart="drag(event)"></span>
@@ -113,6 +113,12 @@
             <input type="button" id="page_left" onclick="page_left()" value="<<" />
             &nbsp;&nbsp;&nbsp;
             <input type="button" id="page_right" onclick="page_right()" value=">>" />
+            <select id="header_font_select">
+                <option value="font_1">Font 1</option>
+                <option value="font_2">Font 2</option>
+                <option value="font_3">Font 3</option>
+                <option value="font_4">Font 4</option>
+            </select>
             <br/>
         </div>
         <br/>
