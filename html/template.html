@@ -106,7 +106,7 @@
                             <div class="accordion-inner">
                                 <input id="fileupload" type="file" name="files[]" data-url="../php/" multiple>
             
-                                <div id="upload_progress" class="progress progress-striped active" style="width: 30%; visibility: hidden;">
+                                <div id="upload_progress" class="progress progress-striped active" style="width: 60%; visibility: hidden;">
                                     <div class="bar" style="width: 0%;"></div>
                                 </div>
                             </div>
@@ -200,8 +200,17 @@
                     alert("DONE!" + index + " | " + file.name);
                     $("#fileupload").css('visibility', 'visible');
                     $("#upload_progress .bar").css('visibility', 'hidden');
-                    $("#page1_media").append('<img class="media_item" src="../php/files/' + file.name 
+                    console.log(file.type);
+                    if(file.type.indexOf("image") != -1){
+                        $("#page1_media")
+                        .append('<img class="media_item" src="../php/files/' + file.name 
                         + '" height="200" width="200" ></img>')
+                    }else if(file.type.indexOf("audio") != -1){
+                        console.log("Found Audio, don't know how to add");
+                    }else if(file.type.indexOf("video") != -1){
+                        console.log("Found video, don't know how to add");
+                    }
+                    
                 });
             },
             progressall: function (e, data) {
