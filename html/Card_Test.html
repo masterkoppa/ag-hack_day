@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="../javascript/turn.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			#magazine{
+			    width: 400px;
+			    height: 600px;
+			    box-shadow: 10px 10px 5px #888;
+			}
+			#magazine .turn-page{
+			    background-color:#ccc;
+			}
+			
+		</style>
+		<center>
+			<div id='magazine'>
+			    <div id='page1'></div>
+			    <div id='page2'></div>
+			    <div id='page3'></div>
+			</div>
+		</center>
+		<script type="text/javascript">
+			console.log("Test");
+			$('#page1').load('Page1_Example.html');
+			$('#page2').load('Page2_Example.html');
+			$('#page3').load('Page3_Example.html');
+			$('#magazine').turn({gradients: true, acceleration: true, display: 'single'});
+		</script>
+	</body>
+</html>
