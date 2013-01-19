@@ -32,8 +32,8 @@
             <!--<input type="file" id="image_fileupload" onchange="upload_image(getPageNum())" />-->
             <input id="fileupload" type="file" name="files[]" data-url="../php/" multiple>
             
-            <div class="progress progress-striped active">
-                <div class="bar" style="width: 40%;"></div>
+            <div id="upload_progress" class="progress progress-striped active" style="width: 30%; visibility: hidden;">
+                <div class="bar" style="width: 0%;"></div>
             </div>
             <br/>
             <input type="button" id="page_left" onclick="page_left()" value="<<" />
@@ -93,20 +93,28 @@
     <script src="../javascript/jquery.iframe-transport.js"></script>
     <script src="../javascript/jquery.fileupload.js"></script>
     <script>
+    
     $(function () {
         $('#fileupload').fileupload({
             dataType: 'json',
             done: function (e, data) {
                 $.each(data.files, function (index, file) {
-                    $('<p/>').text(file.name).appendTo(document.body);
+                    //Change to a bootstrap pop-up
+                    alert("DONE!" + index + " | " + file.name);
+                    $("#fileupload").css('visibility', 'visible');
+                    $("#upload_progress .bar").css('visibility', 'hidden');
+                    $("#page1_media").append('<img src="../php/files/' + file.name 
+                        + '" height="200" width="200" ></img>')
                 });
             },
             progressall: function (e, data) {
                 var progress = parseInt(data.loaded / data.total * 100, 10);
-                $('#progress .bar').css(
+                $('#upload_progress .bar').css(
                     'width',
                     progress + '%'
                 );
+                $("#fileupload").css('visibility', 'hidden');
+                $("#upload_progress .bar").css('visibility', 'visible');
             }
         });
     });
