@@ -9,7 +9,8 @@
 
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="stylesheet" media="screen" type="text/css" href="../css/colorpicker.css" />
+        <script type="text/javascript" src="../js/colorpicker.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/template.css" />
         <link href="../css/common.css" rel="stylesheet">
 	</head>
@@ -21,7 +22,7 @@
                 <ul class="nav">
                     <li class="active">
                         <a href="#">
-                            Config
+                            <img src="../Images/Navigation/build_btn.png"></img>
                         </a>
                     </li>
                 </ul>
@@ -31,6 +32,7 @@
         <div class="row">
             <div class="span3 sidebar">
                 Color
+                <div id="colorPicker"></div>
                 <br/>
                 Header Settings
                 <br/>
@@ -157,5 +159,9 @@
         });
     });
     </script>
+
+    <script type="text/javascript">
+             $('#colorPicker').ColorPicker({flat: true});
+        </script>
 	</body>
 </html>
