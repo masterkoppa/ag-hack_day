@@ -53,6 +53,18 @@ body{
     font-style: italic;
 }
 
+.sans_serif{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.serif{
+    font-family: Times, serif;
+}
+
+.mono{
+    font-family: Courier, monospace;
+}
+
 @media (min-width: 1200px){
     body{
         margin-left: 2.5%;

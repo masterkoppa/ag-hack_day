@@ -32,6 +32,92 @@ var page_num;
 var page_num_form;
 var editing_area;
 
+function change_font_header(className){
+    page_num = getPageNum();
+    switch(page_num)
+    {
+        case 1:
+            $(page1_header).removeClass('serif');
+            $(page1_header).removeClass('sans-serif');
+            $(page1_header).removeClass('mono');
+            $(page1_header).addClass(className);
+            break;
+        case 2:
+            $(page2_header).removeClass('serif');
+            $(page2_header).removeClass('sans-serif');
+            $(page2_header).removeClass('mono');
+            $(page2_header).addClass(className);
+            break;
+        case 3:
+            $(page3_header).removeClass('serif');
+            $(page3_header).removeClass('sans-serif');
+            $(page3_header).removeClass('mono');
+            $(page3_header).addClass(className);
+            break;
+        case 4:
+            $(page4_header).removeClass('serif');
+            $(page4_header).removeClass('sans-serif');
+            $(page4_header).removeClass('mono');
+            $(page4_header).addClass(className);
+            break;
+        case 5:
+            $(page5_header).removeClass('serif');
+            $(page5_header).removeClass('sans-serif');
+            $(page5_header).removeClass('mono');
+            $(page5_header).addClass(className);
+            break;
+        case 6:
+            $(page6_header).removeClass('serif');
+            $(page6_header).removeClass('sans-serif');
+            $(page6_header).removeClass('mono');
+            $(page6_header).addClass(className);
+            break;
+    }
+}
+
+function change_font_subheader(className){
+    page_num = getPageNum();
+    switch(page_num)
+    {
+        case 1:
+            $(page1_subheader).removeClass('serif');
+            $(page1_subheader).removeClass('sans-serif');
+            $(page1_subheader).removeClass('mono');
+            $(page1_subheader).addClass(className);
+            break;
+        case 2:
+            $(page2_subheader).removeClass('serif');
+            $(page2_subheader).removeClass('sans-serif');
+            $(page2_subheader).removeClass('mono');
+            $(page2_subheader).addClass(className);
+            break;
+        case 3:
+            $(page3_subheader).removeClass('serif');
+            $(page3_subheader).removeClass('sans-serif');
+            $(page3_subheader).removeClass('mono');
+            $(page3_subheader).addClass(className);
+            break;
+        case 4:
+            $(page4_subheader).removeClass('serif');
+            $(page4_subheader).removeClass('sans-serif');
+            $(page4_subheader).removeClass('mono');
+            $(page4_subheader).addClass(className);
+            break;
+        case 5:
+            $(page5_subheader).removeClass('serif');
+            $(page5_subheader).removeClass('sans-serif');
+            $(page5_subheader).removeClass('mono');
+            $(page5_subheader).addClass(className);
+            break;
+        case 6:
+            $(page6_subheader).removeClass('serif');
+            $(page6_subheader).removeClass('sans-serif');
+            $(page6_subheader).removeClass('mono');
+            $(page6_subheader).addClass(className);
+            break;
+    }
+}
+
 function bold_header(page_num){
     switch(page_num)
     {
