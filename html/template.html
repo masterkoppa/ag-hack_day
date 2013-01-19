@@ -5,13 +5,18 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script src="../javascript/turn.min.js" type="text/javascript"></script>
         <script src="../javascript/template.js" type="text/javascript"></script>
+        <script src="../javascript/importWebFonts.js" type="text/javascript"></script>
         <script src="../bootstrap/js/bootstrap.min.js"></script>
 
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link href="../css/spectrum.css" rel="stylesheet">
+        <script src="../javascript/spectrum.js"></script>
+
         <link rel="stylesheet" type="text/css" href="../css/template.css" />
         <link href="../css/common.css" rel="stylesheet">
+        
 	</head>
 
 	<body>
@@ -21,7 +26,7 @@
                 <ul class="nav">
                     <li class="active">
                         <a href="#">
-                            Config
+                            <img src="../Images/Navigation/build_btn.png"></img>
                         </a>
                     </li>
                 </ul>
@@ -30,14 +35,96 @@
         <div class="ui_outside">
         <div class="row">
             <div class="span3 sidebar">
-                Color
-                <br/>
-                Header Settings
-                <br/>
-                Subheader Settings
-                <br/>
-                Media Settings
-                <br/>
+                <div class="accordion" id="options">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#options" href="#header_settings">
+                                Header Settings
+                            </a>
+                        </div>
+                        <div id="header_settings" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <dl>
+                                    <dt>
+                                        Text
+                                    </dt>
+                                    <dd>
+                                        <input type="text" id="header_field" oninput="update_header(getPageNum())" value=""/>
+                                    </dd>
+                                    <dt>
+                                        Text Properties
+                                    </dt>
+                                    <dd>
+                                        <div class="btn-toolbar">
+                                        <div class="btn-group">
+                                         
+                                        <a class="btn" href="#" onclick="bold(this, 'header')"><i class="icon-bold"></i></a>
+                                        <a class="btn" href="#" onclick="italic(this, 'header')"><i class="icon-italic"></i></a>
+                                        </div>
+                                        </div>
+                                    </dd>
+                                    <dt>
+                                        Color
+                                    </dt>
+                                    <dd>
+                                        <input type='text' id="flat1" />
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#options" href="#subheader_settings">
+                                Subheader Settings
+                            </a>
+                        </div>
+                        <div id="subheader_settings" class="accordion-body collapse">
+                            <dl>
+                                <dt>
+                                    Text
+                                </dt>
+                                <dd>
+                                    <input type="text" id="subheader_field" oninput="update_subheader(getPageNum())" value=""/>
+                                </dd>
+                                <dt>
+                                        Text Properties
+                                    </dt>
+                                    <dd>
+                                        <div class="btn-toolbar">
+                                        <div class="btn-group">
+                                         
+                                        <a class="btn" href="#" onclick="bold(this, 'subheader')"><i class="icon-bold"></i></a>
+                                        <a class="btn" href="#" onclick="italic(this, 'subheader')"><i class="icon-italic"></i></a>
+                                        </div>
+                                        </div>
+                                    </dd>
+                                <dt>
+                                    Color
+                                </dt>
+                                <dd>
+                                    <input type='text' id="flat2" />
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#options" href="#media_settings">
+                                Media Settings
+                            </a>
+                        </div>
+                        <div id="media_settings" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <input id="fileupload" type="file" name="files[]" data-url="../php/" multiple>
+            
+                                <div id="upload_progress" class="progress progress-striped active" style="width: 60%; visibility: hidden;">
+                                    <div class="bar" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="span9 edit_area">
             <div id='card'>
@@ -45,7 +132,22 @@
                 <div class="page_border">
                     <span id="page1_header" class="dragndrop_elem header" draggable="true" ondragstart="drag(event)"></span>
                     <span id="page1_subheader" class="dragndrop_elem subheader" draggable="true" ondragstart="drag(event)"></span>
-                    <div id="page1_media" class="dragndrop_elem" draggable="true" ondragstart="drag(event)"></div>
+                    <div id="page1_media" class="dragndrop_elem" draggable="true" ondragstart="drag(event)">
+                        <!-- <img alt="desert" src="../Images/Desert.jpg" height="200px" width="200px" /> -->
+                        <!--
+                        <video width="200" height="200" controls>
+                            <source src="../resources/videos/Wildlife.webm" type="video/webm">
+                            <source src="../resources/videos/Wildlife.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        -->
+                        <!--
+                        <audio controls>
+                            <source src="../resources/audio/happy_birthday_to_you.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        -->
+                    </div>
                 </div>
             </div>
             <div id='page2' ondrop="drop(event)" ondragover="allowDrop(event)" class="page">
@@ -84,42 +186,20 @@
                 </div>
             </div>
         </div>
+        
             </div>
         </div>
-        <div id="config_area" align="center">
-            <span id="page_num_label">Page number to edit: </span>
-            <form id="page_num_form" action="">
-                <input type="radio" name="page_num" value="1" onchange="updatePageNum(1)" checked>1
-                <input type="radio" name="page_num" value="2" onchange="updatePageNum(2)">2
-                <input type="radio" name="page_num" value="3" onchange="updatePageNum(3)">3 <br/>
-                <input type="radio" name="page_num" value="4" onchange="updatePageNum(4)">4
-                <input type="radio" name="page_num" value="5" onchange="updatePageNum(5)">5
-                <input type="radio" name="page_num" value="6" onchange="updatePageNum(6)">6
-            </form>
-            <span id="header_label">Header: </span>
-            <input type="text" id="header_field" oninput="update_header(getPageNum())"/>
-            <br/>
-            <span id="subheader_label">Subheader: </span>
-            <input type="text" id="subheader_field" oninput="update_subheader(getPageNum())"/>
-            <br/>
-            <span id="media_label">Media path: </span>
-            <!--<input type="file" id="image_fileupload" onchange="upload_image(getPageNum())" />-->
-            <input id="fileupload" type="file" name="files[]" data-url="../php/" multiple>
-            
-            <div id="upload_progress" class="progress progress-striped active" style="width: 30%; visibility: hidden;">
-                <div class="bar" style="width: 0%;"></div>
-            </div>
-            <br/>
-            <input type="button" id="page_left" onclick="page_left()" value="<<" />
-            &nbsp;&nbsp;&nbsp;
-            <input type="button" id="page_right" onclick="page_right()" value=">>" />
-            <select id="header_font_select">
-                <option value="font_1">Font 1</option>
-                <option value="font_2">Font 2</option>
-                <option value="font_3">Font 3</option>
-                <option value="font_4">Font 4</option>
-            </select>
-            <br/>
+        <div class="pagination center">
+            <ul>
+                <li><a href="#" id="page_prev" onclick="page_left()">Prev</a></li>
+                <li><a href="#" id="page_btn1" onclick="updatePageNum(1)">1</a></li>
+                <li><a href="#" id="page_btn2" onclick="updatePageNum(2)">2</a></li>
+                <li><a href="#" id="page_btn3" onclick="updatePageNum(3)">3</a></li>
+                <li><a href="#" id="page_btn4" onclick="updatePageNum(4)">4</a></li>
+                <li><a href="#" id="page_btn5" onclick="updatePageNum(5)">5</a></li>
+                <li><a href="#" id="page_btn6" onclick="updatePageNum(6)">6</a></li>
+                <li><a href="#" id="page_next" onclick="page_right()">Next</a></li>
+            </ul>
         </div>
         <br/>
 
@@ -141,8 +221,17 @@
                     alert("DONE!" + index + " | " + file.name);
                     $("#fileupload").css('visibility', 'visible');
                     $("#upload_progress .bar").css('visibility', 'hidden');
-                    $("#page1_media").append('<img class="media_item" src="../php/files/' + file.name 
+                    console.log(file.type);
+                    if(file.type.indexOf("image") != -1){
+                        $("#page1_media")
+                        .append('<img class="media_item" src="../php/files/' + file.name 
                         + '" height="200" width="200" ></img>')
+                    }else if(file.type.indexOf("audio") != -1){
+                        $("#page1_media").append('<audio controls><source src="../php/files/' + file.name + '" type="audio/wav">Your browser does not support the audio element</audio>');
+                    }else if(file.type.indexOf("video") != -1){
+                        $("#page1_media").append('<video width="200" height="200" controls><source src="../php/files/' + file.name 
+                        + '" type="video/webm"> Your Browser Does not Support the video tag</video>');
+                    }
                 });
             },
             progressall: function (e, data) {
@@ -155,7 +244,66 @@
                 $("#upload_progress .bar").css('visibility', 'visible');
             }
         });
+
+        updatePageNum(1);
     });
+    $("#flat1").spectrum({
+        flat: true,
+        showInput: true,
+        move: function(color){
+            color_header(color.toHexString(), getPageNum());
+        }
+    });
+    $("#flat2").spectrum({
+        flat: true,
+        showInput: true,
+        move: function(color){
+            color_subheader(color.toHexString(), getPageNum());
+        }
+    });
+
+    function bold(button, type){
+        if($(button).attr('class').indexOf("active") == -1){
+            $(button).addClass("active");
+            page = getPageNum();
+            if(type.indexOf("sub") == -1){
+                bold_header(page);
+            }else{
+                bold_subheader(page);
+            }
+        }else{
+            $(button).removeClass("active");
+            page = getPageNum();
+            if(type.indexOf("sub") == -1){
+                unbold_header(page);
+            }else{
+                unbold_subheader(page);
+            }
+        }
+    }
+
+    function italic(button, type){
+        if($(button).attr('class').indexOf("active") == -1){
+            $(button).addClass("active");
+            page = getPageNum();
+            if(type.indexOf("sub") == -1){
+                italic_header(page);
+            }else{
+                italic_subheader(page);
+            }
+            
+        }else{
+            $(button).removeClass("active");
+            page = getPageNum();
+            if(type.indexOf("sub") == -1){
+                unitalic_header(page);
+            }else{
+                unitalic_subheader(page);
+            }
+        }
+    }
+    
     </script>
+
 	</body>
 </html>
