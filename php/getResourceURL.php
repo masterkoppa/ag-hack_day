@@ -21,12 +21,12 @@ $line = mysql_fetch_array($result, MYSQL_ASSOC);
 
 $resource = $line['resource_urls'];
 
-echo $resource;
-
 // Free resultset
 mysql_free_result($result);
 
 // Closing connection
 mysql_close($link);
+
+echo $resource;
 
 ?>
