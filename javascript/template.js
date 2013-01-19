@@ -30,6 +30,7 @@ var page6_subheader;
 var page6_image;
 var page_num;
 var page_num_form;
+var editing_area;
 
 // Modifies the header for the given page (1 indexed) as characters are typed in the corresponding field
 function update_header(page_num)
@@ -154,9 +155,13 @@ function getPageNum()
 // Function to be called when dragging an element
 function drag(ev)
 {
+    /*
     var off_set = $("#"+ev.target.id).offset();
     var x = off_set.left;
     var y = off_set.top;
+    */
+    var x = ev.clientX;
+    var y = ev.clientY;
     ev.dataTransfer.setData("text/plain", x + "," + y + "," + ev.target.id);
 }
 
@@ -182,7 +187,63 @@ function drop(ev)
         var leftcoord = el.style.left.substring(0, el.style.left.length - 2);
         var topcoord = el.style.top.substring(0, el.style.top.length - 2);
         el.style.left = Math.abs(ev.clientX - (parseInt(info[0])) + parseInt(leftcoord, 10)) + "px";
-        el.style.top = Math.abs(ev.clientY - (parseInt(info[1])) + parseInt(topcoord, 10) + window.pageYOffset) + "px";
+        el.style.top = Math.abs(ev.clientY - (parseInt(info[1])) + parseInt(topcoord, 10)) + "px";
+    }
+}
+
+// Function called on left "page flip" in edit mode
+function page_left()
+{
+    if(editing_area != 1)
+    {
+        editing_area--;
+        if(editing_area == 1)
+        {
+            page2.style.visibility = "hidden";
+            page3.style.visibility = "hidden";
+            page1.style.visibility = "visible";
+        }
+        if(editing_area == 2)
+        {
+            page4.style.visibility = "hidden";
+            page5.style.visibility = "hidden";
+            page2.style.visibility = "visible";
+            page3.style.visibility = "visible";
+        }
+        if(editing_area == 3)
+        {
+            page6.style.visibility = "hidden";
+            page4.style.visibility = "visible";
+            page5.style.visibility = "visible";
+        }
+    }
+}
+
+// Function called on right "page flip" in edit mode
+function page_right()
+{
+    if(editing_area != 4)
+    {
+        editing_area++;
+        if(editing_area == 2)
+        {
+            page1.style.visibility = "hidden";
+            page2.style.visibility = "visible";
+            page3.style.visibility = "visible";
+        }
+        if(editing_area == 3)
+        {
+            page2.style.visibility = "hidden";
+            page3.style.visibility = "hidden";
+            page4.style.visibility = "visible";
+            page5.style.visibility = "visible";
+        }
+        if(editing_area == 4)
+        {
+            page4.style.visibility = "hidden";
+            page5.style.visibility = "hidden";
+            page6.style.visibility = "visible";
+        }
     }
 }
 
@@ -218,6 +279,8 @@ $(function () {
     page6_image = document.getElementById("page6_image");
     page_num = 1;
     page_num_form = document.getElementById("page_num_form");
+    editing_area = 1;
 
-    //$('#card').turn({gradients: true, acceleration: true});
+    //$('#card').turn({gradients: true, acceleration: true, page: 2, });
+
 });

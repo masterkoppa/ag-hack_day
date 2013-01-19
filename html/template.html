@@ -27,51 +27,61 @@
             <br/>
             <span id="image_label">Image path: </span>
             <input type="file" id="image_fileupload" onchange="upload_image(getPageNum())" />
+            <br/>
+            <input type="button" id="page_left" onclick="page_left()" value="<<" />
+            &nbsp;&nbsp;&nbsp;
+            <input type="button" id="page_right" onclick="page_right()" value=">>" />
+            <br/>
         </div>
         <br/>
         <div id='card'>
             <div id='page1' ondrop="drop(event)" ondragover="allowDrop(event)" class="page">
                 <div class="page_border">
-                    <h1 id="page1_header" draggable="true" ondragstart="drag(event)"></h1>
-                    <h2 id="page1_subheader"></h2>
-                    <div id="page1_image"></div>
+                    <span id="page1_header" class="dragndrop_elem header" draggable="true" ondragstart="drag(event)"></span>
+                    <br/>
+                    <br/>
+                    <span id="page1_subheader" class="dragndrop_elem subheader" draggable="true" ondragstart="drag(event)"></span>
+                    <div id="page1_image" class="dragndrop_elem" draggable="true" ondragstart="drag(event)"></div>
                 </div>
             </div>
-            <div id='page2'>
+            <div id='page2' ondrop="drop(event)" ondragover="allowDrop(event)" class="page">
                 <div class="page_border">
-                    <h1 id="page2_header"></h1>
-                    <h2 id="page2_subheader"></h2>
-                    <div id="page2_image"></div>
+                    <span id="page2_header" class="dragndrop_elem header" draggable="true" ondragstart="drag(event)"></span>
+                    <span id="page2_subheader" class="dragndrop_elem subheader" draggable="true" ondragstart="drag(event)"></span>
+                    <div id="page2_image" class="dragndrop_elem" draggable="true" ondragstart="drag(event)"></div>
                 </div>
             </div>
-            <div id='page3'>
+            <div id='page3' ondrop="drop(event)" ondragover="allowDrop(event)" class="page">
                 <div class="page_border">
-                    <h1 id="page3_header"></h1>
-                    <h2 id="page3_subheader"></h2>
-                    <div id="page3_image"></div>
+                    <span id="page3_header" class="dragndrop_elem header" draggable="true" ondragstart="drag(event)"></span>
+                    <span id="page3_subheader" class="dragndrop_elem subheader" draggable="true" ondragstart="drag(event)"></span>
+                    <div id="page3_image" class="dragndrop_elem" draggable="true" ondragstart="drag(event)"></div>
                 </div>
             </div>
-            <div id='page4'>
+            <div id='page4' ondrop="drop(event)" ondragover="allowDrop(event)" class="page">
                 <div class="page_border">
-                    <h1 id="page4_header"></h1>
-                    <h2 id="page4_subheader"></h2>
-                    <div id="page4_image"></div>
+                    <span id="page4_header" class="dragndrop_elem header" draggable="true" ondragstart="drag(event)"></span>
+                    <span id="page4_subheader" class="dragndrop_elem subheader" draggable="true" ondragstart="drag(event)"></span>
+                    <div id="page4_image" class="dragndrop_elem" draggable="true" ondragstart="drag(event)"></div>
                 </div>
             </div>
-            <div id="page5">
+            <div id="page5" ondrop="drop(event)" ondragover="allowDrop(event)" class="page">
                 <div class="page_border">
-                    <h1 id="page5_header"></h1>
-                    <h2 id="page5_subheader"></h2>
-                    <div id="page5_image"></div>
+                    <span id="page5_header" class="dragndrop_elem header" draggable="true" ondragstart="drag(event)"></span>
+                    <span id="page5_subheader" class="dragndrop_elem subheader" draggable="true" ondragstart="drag(event)"></span>
+                    <div id="page5_image" class="dragndrop_elem" draggable="true" ondragstart="drag(event)"></div>
                 </div>
             </div>
-            <div id="page6">
+            <div id="page6" ondrop="drop(event)" ondragover="allowDrop(event)" class="page">
                 <div class="page_border">
-                    <h1 id="page6_header"></h1>
-                    <h2 id="page6_subheader"></h2>
-                    <div id="page6_image"></div>
+                    <span id="page6_header" class="dragndrop_elem header" draggable="true" ondragstart="drag(event)"></span>
+                    <span id="page6_subheader" class="dragndrop_elem subheader" draggable="true" ondragstart="drag(event)"></span>
+                    <div id="page6_image" class="dragndrop_elem" draggable="true" ondragstart="drag(event)"></div>
                 </div>
             </div>
         </div>
+    <br/>
+    <br/>
+    <br/>
 	</body>
 </html>

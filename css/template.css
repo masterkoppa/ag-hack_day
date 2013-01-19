@@ -35,10 +35,58 @@ h1
 
 #card .page
 {
-
+    width:5in;
+    height:7in;
+    position:absolute;
 }
 
-#card #page1_header
+#card .dragndrop_elem
 {
     position:absolute;
+}
+
+#card #page1
+{
+    margin-left:5in;
+}
+
+#card #page2
+{
+    visibility:hidden;
+}
+
+#card #page3
+{
+    margin-left:5in;
+    visibility:hidden;
+}
+
+#card #page4
+{
+    visibility:hidden;
+}
+
+#card #page5
+{
+    margin-left:5in;
+    visibility:hidden;
+}
+
+#card .subheader
+{
+    margin:0;
+    padding:0;
+    font-size:1.5em;
+}
+
+#card .header
+{
+    margin:0;
+    padding:0;
+    font-size:2.0em;
+}
+
+#card #page6
+{
+    visibility:hidden;
 }
