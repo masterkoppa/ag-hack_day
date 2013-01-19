@@ -1,3 +1,6 @@
+// Author's note: I recognize that my way of capturing all the members as I have is very sub-optimal.
+// A good /FIX/ would be to simply access them in their necessary functions ONCE, based off the params
+// provided to the given method.
 
 // Member elements for easy access
 var header_field;
@@ -103,6 +106,7 @@ function upload_image(page_num)
     }
 }
 
+// Update the page number and the fields corresponding to the selected page
 function updatePageNum(num)
 {
     page_num = num;
@@ -141,11 +145,13 @@ function updatePageNum(num)
 
 }
 
+// Accessor for page number
 function getPageNum()
 {
     return page_num;
 }
 
+// Run once the DOM is ready
 $(function () {
     // Member elements for easy access
     header_field = document.getElementById("header_field");
