@@ -1,8 +1,8 @@
-
 .navbar{
     position: fixed;
     width: 100%;
     top: 0px;
+    z-index: 10;
 }
 .navbar .brand{
     font-size: 100px;
@@ -11,6 +11,7 @@
 
 body{
     padding-top: 150px;
+    z-index: 0;
 }
 
 .center{
@@ -48,17 +49,21 @@ body{
     font-weight: bold;
 }
 
+.italic{
+    font-style: italic;
+}
+
 @media (min-width: 1200px){
     body{
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
 
         background-image: url('../Images/noise_background.gif');
         background-repeat: repeat;
     }
     .navbar{
-        width: 90%;
-          }
+        width: 95%;
+    }
 }
 @media (min-width: 1400px){
     body{
@@ -71,3 +76,4 @@ body{
     .navbar{
         width: 70%;
     }
+}
