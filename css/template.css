@@ -103,3 +103,12 @@ h1
 {
     visibility:hidden;
 }
+
+.ui_outside{
+    background: #ffffff;
+}
+
+.edit_area{
+    background-image: url('../Images/main_background.png');
+    background-repeat: repeat;
+}
