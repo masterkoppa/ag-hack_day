@@ -1,0 +1,9 @@
+#card
+{
+    width:800px;
+    height:500px;
+}
+#card .turn-page
+{
+    background-color:#ccc;
+}

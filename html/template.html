@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="../javascript/turn.min.js" type="text/javascript"></script>
+        <script src="../javascript/template.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="../css/template.css" />
+	</head>
+
+	<body>
+        <div id="config_area">
+            <span id="header_label">Header: </span>
+            <input type="text" id="header_field" oninput="update_header(1)"/>
+            <br/>
+            <span id="subheader_label">Subheader: </span>
+            <input type="text" id="subheader_field" oninput="update_subheader(1)"/>
+            <br/>
+            <span id="image_label">Image path: </span>
+            <input type="file" id="image_fileupload" onchange="upload_image(1)" />
+        </div>
+        <br/>
+        <div id='card'>
+            <div id='page1'>
+                <h1 id="page1_header"></h1>
+                <h2 id="page1_subheader"></h2>
+                <div id="page1_image"></div>
+            </div>
+            <div id='page2'>
+                <h1 id="page2_header"></h1>
+                <h2 id="page2_subheader"></h2>
+                <div id="page2_image"></div>
+            </div>
+            <div id='page3'>
+                <h1 id="page3_header"></h1>
+                <h2 id="page3_subheader"></h2>
+                <div id="page3_image"></div>
+            </div>
+            <div id='page4'>
+                <h1 id="page4_header"></h1>
+                <h2 id="page4_subheader"></h2>
+                <div id="page4_image"></div>
+            </div>
+        </div>
+	</body>
+</html>
