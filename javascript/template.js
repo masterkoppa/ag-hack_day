@@ -155,11 +155,6 @@ function getPageNum()
 // Function to be called when dragging an element
 function drag(ev)
 {
-    /*
-    var off_set = $("#"+ev.target.id).offset();
-    var x = off_set.left;
-    var y = off_set.top;
-    */
     var x = ev.clientX;
     var y = ev.clientY;
     ev.dataTransfer.setData("text/plain", x + "," + y + "," + ev.target.id);
@@ -180,7 +175,14 @@ function drop(ev)
     if(! el.style.left && ! el.style.top)
     {
         el.style.left = Math.abs(ev.clientX - parseInt(info[0], 10)) + "px";
-        el.style.top = Math.abs(ev.clientY - parseInt(info[1], 10)) + "px";
+        if($(el).hasClass("subheader"))
+        {
+            el.style.top = Math.abs(ev.clientY - parseInt(info[1], 10) + 60) + "px";
+        }
+        else
+        {
+            el.style.top = Math.abs(ev.clientY - parseInt(info[1], 10)) + "px";
+        }
     }
     else
     {
