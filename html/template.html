@@ -9,12 +9,6 @@
         <link rel="stylesheet" type="text/css" href="../css/template.css" />
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style type="text/css">
-            .bar {
-                height: 18px;
-                background: green;
-            }
-        </style>
 	</head>
 
 	<body>
@@ -36,7 +30,12 @@
             <br/>
             <span id="image_label">Image path: </span>
             <!--<input type="file" id="image_fileupload" onchange="upload_image(getPageNum())" />-->
-            <input id="fileupload" type="file" name="files[]" data-url="server/php/" multiple>
+            <input id="fileupload" type="file" name="files[]" data-url="../php/" multiple>
+            
+            <div class="progress progress-striped active">
+                <div class="bar" style="width: 40%;"></div>
+            </div>
+
             <br/>
             <input type="button" id="page_left" onclick="page_left()" value="<<" />
             &nbsp;&nbsp;&nbsp;
@@ -91,9 +90,9 @@
     <br/>
     <br/>
     <br/>
-    <script src="js/vendor/jquery.ui.widget.js"></script>
-    <script src="js/jquery.iframe-transport.js"></script>
-    <script src="js/jquery.fileupload.js"></script>
+    <script src="../javascript/vendor/jquery.ui.widget.js"></script>
+    <script src="../javascript/jquery.iframe-transport.js"></script>
+    <script src="../javascript/jquery.fileupload.js"></script>
     <script>
     $(function () {
         $('#fileupload').fileupload({
