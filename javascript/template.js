@@ -176,15 +176,13 @@ function drop(ev)
     {
         el.style.left = Math.abs(ev.clientX - parseInt(info[0], 10)) + "px";
         el.style.top = Math.abs(ev.clientY - parseInt(info[1], 10)) + "px";
-        alert(info[0] + " " + info[1]);
     }
     else
     {
         var leftcoord = el.style.left.substring(0, el.style.left.length - 2);
         var topcoord = el.style.top.substring(0, el.style.top.length - 2);
-        alert(info[0] + " " + info[1]);
-        el.style.left = Math.abs(ev.clientX - (parseInt(info[0]) + parseInt(leftcoord, 10))) + "px";
-        el.style.top = Math.abs(ev.clientY - (parseInt(info[1]) + parseInt(topcoord, 10))) + "px";
+        el.style.left = Math.abs(ev.clientX - (parseInt(info[0])) + parseInt(leftcoord, 10)) + "px";
+        el.style.top = Math.abs(ev.clientY - (parseInt(info[1])) + parseInt(topcoord, 10) + window.pageYOffset) + "px";
     }
 }
 
@@ -221,5 +219,5 @@ $(function () {
     page_num = 1;
     page_num_form = document.getElementById("page_num_form");
 
-    $('#card').turn({gradients: true, acceleration: true});
+    //$('#card').turn({gradients: true, acceleration: true});
 });
