@@ -55,7 +55,7 @@ h1
 #card #page2
 {
     visibility:hidden;
-    background-image:url('../Images/Birthday_Card_inner_left.png')
+    background-image:url('../Images/card_bg.png')
 }
 
 #card #page3
@@ -68,20 +68,20 @@ h1
 #card #page4
 {
     visibility:hidden;
-    background-image:url('../Images/Birthday_Card_bg.png')
+    background-image:url('../Images/card_bg.png')
 }
 
 #card #page5
 {
     margin-left:5in;
     visibility:hidden;
-    background-image:url('../Images/Birthday_Card_bg.png')
+    background-image:url('../Images/card_bg.png')
 }
 
 #card #page6
 {
     visibility:hidden;
-    background-image:url('../Images/Birthday_Card_bg.png')
+    background-image:url('../Images/birthday_qr_page.png')
 }
 
 #card .subheader
