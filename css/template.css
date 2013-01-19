@@ -112,3 +112,7 @@ h1
     background-image: url('../Images/main_background.png');
     background-repeat: repeat;
 }
+
+.sp-container{
+    z-index: 0;
+}
