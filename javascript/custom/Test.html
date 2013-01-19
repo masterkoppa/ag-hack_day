@@ -2,22 +2,18 @@
 	<head>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
-		<script type="text/javascript" src="greeting-loader.js"></script>
+		<script type="text/javascript" src="../qrenc3/qr_code.js"></script>
+		<script type="text/javascript" src="qr_code_bridge.js"></script>
 	</head>
-	<div id="hash">
+	<body>
+    <div id="test"></div>
 
-	</div>
-	<script type="text/javascript">
-		var hash = window.location.hash.substring(1);
+    	<script type="text/javascript">
+    		window.onload = function(){
+    			insertQRCode('URL', $("#test"));
+    		}
+    	</script>
 
-		var resourceURL = "";
-
-		console.log(hash);
-
-		$.post('../../php/getResourceURL.php', {'hash': hash}, function(data){
-			resourceURL = data;
-		});
-
-
-	</script>
+</body>
+	
 </html>
