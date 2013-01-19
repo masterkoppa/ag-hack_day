@@ -223,6 +223,37 @@
             </ul>
         </div>
         <br/>
+        <br/>
+
+ 
+        <!-- Modal -->
+        <div id="finishModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Thanks for Using CardShare</h3>
+        </div>
+        <div class="modal-body">
+        <p>Thank you for using CardShare you card has been saved.</p>
+        </div>
+        <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Exit</button>
+        </div>
+        </div>
+        <a href="#finishModal" role="button" class="btn btn-success pull-right" data-toggle="modal">Finish Building</a>
+
+        <!-- Modal -->
+        <div id="uploadDone" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">File Uploaded</h3>
+        </div>
+        <div class="modal-body">
+        <p>Your file should be uploaded.</p>
+        </div>
+        <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Exit</button>
+        </div>
+        </div>
 
     <br/>
     <br/>
@@ -239,7 +270,8 @@
             done: function (e, data) {
                 $.each(data.files, function (index, file) {
                     //Change to a bootstrap pop-up
-                    alert("DONE!" + index + " | " + file.name);
+                    //alert("DONE!" + index + " | " + file.name);
+                    $('$uploadDone').modal({show: true, backdrop: true});
                     $("#fileupload").css('visibility', 'visible');
                     $("#upload_progress .bar").css('visibility', 'hidden');
                     console.log(file.type);
