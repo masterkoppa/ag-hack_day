@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87bcb53f-308f-4a2a-91cd-4af8f481a966" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Justin\Documents\GitHub\ag-hack_day\css\jmc_test.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Justin\Documents\GitHub\ag-hack_day\html\Page1_Example.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Justin\Documents\GitHub\ag-hack_day\html\Page2_Example.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Justin\Documents\GitHub\ag-hack_day\html\Page3_Example.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Justin\Documents\GitHub\ag-hack_day\html\jmc_test.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Justin\Documents\GitHub\ag-hack_day\javascript\jmc_test.js" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Justin\Documents\GitHub\ag-hack_day\html\Card_Test.html" afterPath="$PROJECT_DIR$/html/template.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/template.css" afterPath="$PROJECT_DIR$/css/template.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/template.html" afterPath="$PROJECT_DIR$/html/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript/template.js" afterPath="$PROJECT_DIR$/javascript/template.js" />
     </list>
     <ignored path="ag-hack_day.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +28,7 @@
       <file leaf-file-name="template.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="17" selection-start="89" selection-end="89" vertical-scroll-proportion="0.12757973">
+            <state line="9" column="0" selection-start="418" selection-end="418" vertical-scroll-proportion="0.17073171">
               <folding />
             </state>
           </provider>
@@ -41,7 +37,7 @@
       <file leaf-file-name="template.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/template.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="16" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+            <state line="7" column="1" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -50,7 +46,7 @@
       <file leaf-file-name="template.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/template.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="16" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
+            <state line="124" column="18" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,9 +73,9 @@
         <option value="$PROJECT_DIR$/html/Page3_Example.html" />
         <option value="$PROJECT_DIR$/html/Page2_Example.html" />
         <option value="$PROJECT_DIR$/html/Page1_Example.html" />
+        <option value="$PROJECT_DIR$/css/template.css" />
         <option value="$PROJECT_DIR$/html/template.html" />
         <option value="$PROJECT_DIR$/javascript/template.js" />
-        <option value="$PROJECT_DIR$/css/template.css" />
       </list>
     </option>
   </component>
@@ -131,6 +127,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ag-hack_day" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ag-hack_day" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ag-hack_day" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,23 +353,23 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/template.css">
+    <entry file="file://$PROJECT_DIR$/javascript/template.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="16" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+        <state line="124" column="18" selection-start="3405" selection-end="3405" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/template.js">
+    <entry file="file://$PROJECT_DIR$/css/template.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="16" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
+        <state line="7" column="1" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="89" selection-end="89" vertical-scroll-proportion="0.12757973">
+        <state line="9" column="0" selection-start="418" selection-end="418" vertical-scroll-proportion="0.17073171">
           <folding />
         </state>
       </provider>

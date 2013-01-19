@@ -9,15 +9,24 @@
 	</head>
 
 	<body>
-        <div id="config_area">
+        <div id="config_area" align="center">
+            <span id="page_num_label">Page number to edit: </span>
+            <form id="page_num_form" action="">
+                <input type="radio" name="page_num" value="1" onchange="updatePageNum(1)" checked>1
+                <input type="radio" name="page_num" value="2" onchange="updatePageNum(2)">2
+                <input type="radio" name="page_num" value="3" onchange="updatePageNum(3)">3 <br/>
+                <input type="radio" name="page_num" value="4" onchange="updatePageNum(4)">4
+                <input type="radio" name="page_num" value="5" onchange="updatePageNum(5)">5
+                <input type="radio" name="page_num" value="6" onchange="updatePageNum(6)">6
+            </form>
             <span id="header_label">Header: </span>
-            <input type="text" id="header_field" oninput="update_header(1)"/>
+            <input type="text" id="header_field" oninput="update_header(getPageNum())"/>
             <br/>
             <span id="subheader_label">Subheader: </span>
-            <input type="text" id="subheader_field" oninput="update_subheader(1)"/>
+            <input type="text" id="subheader_field" oninput="update_subheader(getPageNum())"/>
             <br/>
             <span id="image_label">Image path: </span>
-            <input type="file" id="image_fileupload" onchange="upload_image(1)" />
+            <input type="file" id="image_fileupload" onchange="upload_image(getPageNum())" />
         </div>
         <br/>
         <div id='card'>
@@ -40,6 +49,16 @@
                 <h1 id="page4_header"></h1>
                 <h2 id="page4_subheader"></h2>
                 <div id="page4_image"></div>
+            </div>
+            <div id="page5">
+                <h1 id="page5_header"></h1>
+                <h2 id="page5_subheader"></h2>
+                <div id="page5_image"></div>
+            </div>
+            <div id="page6">
+                <h1 id="page6_header"></h1>
+                <h2 id="page6_subheader"></h2>
+                <div id="page6_image"></div>
             </div>
         </div>
 	</body>
