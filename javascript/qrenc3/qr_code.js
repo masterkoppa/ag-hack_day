@@ -710,8 +710,8 @@ function genframe(instring)
 var wd, ht, qrc;
 function setupqr(){
 //    window.scrollTo(0,1)
-    wd = window.innerWidth-10;
-    ht = window.innerHeight-10;
+    wd = 400;
+    ht = 400;
     mp = document.getElementById("mapcanv");
 
     qrd = document.getElementById("qrdiv");

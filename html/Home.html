@@ -26,8 +26,8 @@
             }
 
             .vert_center{
-                padding-top: 10%;
-                padding-bottom: 10%;
+                padding-top: 5%;
+                padding-bottom: 5%;
             }
 
             .active{
@@ -41,10 +41,23 @@
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#77d1ff',GradientType=0 ); /* IE6-9 */
             }
 
+            #Home{
+                background: #ffffff;
+            }
+
             #Samples{
                 background-image: url('../Images/main_background.png');
                 background-repeat: repeat;
             }
+
+            #Card_Shop{
+                background: #ffffff;
+            }
+
+            #Team{
+                background: #ffffff;
+            }
+
 
             .separator{
                 background-image: url('../Images/page_divider.png');
@@ -70,6 +83,14 @@
                 font-weight: bold;
             }
 
+            #qr_code {
+                margin-left: 25%;
+                margin-right: 25%;
+                width: 300px;
+                height: auto;
+
+            }
+
             @media (min-width: 1200px){
                 body{
                     margin-left: 5%;
@@ -89,10 +110,13 @@
                 }
             }
         </style>
-    </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="200">
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../javascript/qrenc3/qr_code.js"></script>
+        <script type="text/javascript" src="../javascript/custom/qr_code_bridge.js"></script>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="200">
+
         <div class="navbar">
             <div class="navbar-inner">
                 <a class="brand" href="#">CS</a>
@@ -124,10 +148,17 @@
             <div class="row">
                 <div class="span7 center vert_center">
                     <h4>
-                        Share how you feel with loved ones in the most creative and memorable way.
+                        Share how you feel with loved ones in the most creative and memorable way. 
                     </h4>
+                    <p>
+                        With Card Share you can connect a greeting card for your loved ones with the power of the internet. 
+                        <br/>
+                        Add a video, add sound or simply add a small message. With this personal touch, that special someone will really apreciate the extra touch.
+                        <div id="qr_code">
+                        </div>
+                    </p>
                 </div>
-                <div class="span5">
+                <div class="span5" style="padding-top: 5%">
                     <img src="../Images/Home/welcome_book.png"></img>
                 </div>
             </div>
@@ -286,6 +317,12 @@
             <br/>
             <br/>
             <br/>
-        </div> 
+        </div>
+
+        <script type="text/javascript">
+            $(function(){
+                insertQRCode("HelloWorld", $("#qr_code"));
+            });
+        </script>
     </body>
 </html>
