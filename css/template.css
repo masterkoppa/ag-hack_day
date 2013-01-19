@@ -1,7 +1,19 @@
+html, body
+{
+    margin:0;
+    padding:0;
+}
+
+h1
+{
+    margin:0;
+    padding:0;
+}
+
 #card
 {
-    width:800px;
-    height:500px;
+    width:10in;
+    height:7in;
     margin:0 auto;
 }
 #card .turn-page
@@ -19,4 +31,14 @@
     width:100%;
     height:100%;
     border:1px solid black;
+}
+
+#card .page
+{
+
+}
+
+#card #page1_header
+{
+    position:absolute;
 }

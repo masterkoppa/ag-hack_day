@@ -30,9 +30,9 @@
         </div>
         <br/>
         <div id='card'>
-            <div id='page1'>
+            <div id='page1' ondrop="drop(event)" ondragover="allowDrop(event)" class="page">
                 <div class="page_border">
-                    <h1 id="page1_header"></h1>
+                    <h1 id="page1_header" draggable="true" ondragstart="drag(event)"></h1>
                     <h2 id="page1_subheader"></h2>
                     <div id="page1_image"></div>
                 </div>
