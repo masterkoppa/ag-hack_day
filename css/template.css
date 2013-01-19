@@ -35,14 +35,15 @@ h1
 
 #card .page
 {
-    width:480px;
-    height:672px;
+    width:5in;
+    height:7in;
     position:absolute;
 }
 
 #card .dragndrop_elem
 {
     position:absolute;
+    cursor:move;
 }
 
 #card #page1
