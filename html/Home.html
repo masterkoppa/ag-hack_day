@@ -45,6 +45,13 @@
                 background-image: url('../Images/main_background.png');
                 background-repeat: repeat;
             }
+	          
+			    
+			#Team{
+				background-image: url('../Images/our_team/team_bg.png');
+				background-repeat: repeat-x;
+            }		
+			
 
             .separator{
                 background-image: url('../Images/page_divider.png');
@@ -78,6 +85,9 @@
                 .navbar{
                     width: 90%;
                 }
+				#Team {
+					with:90%;
+					}
             }
             @media (min-width: 1400px){
                 body{
@@ -87,6 +97,10 @@
                 .navbar{
                     width: 70%;
                 }
+				#Team {
+					with:70%;
+					}
+
             }
         </style>
     </head>
@@ -124,7 +138,7 @@
             <div class="row">
                 <div class="span7 center vert_center">
                     <h4>
-                        Share how you feel with loved ones in the most creative and memorable way.
+                        Share how you feel with loved ones by merging technology and traditional media in a creative and memorable way.
                     </h4>
                 </div>
                 <div class="span5">
@@ -263,29 +277,37 @@
                     <br/>
                 </div>
             </div>
-            <div class="row">
+                    <div class="row">
                 <div class="span4 offset8">
                     <img src="../Images/store/Store_btn.png"></img>
                 </div>
             </div>
         </div>
-        <div id="Team">
-            Random Information about our team
+        <br/>
+         <div id="Team">
+         	<div class="offset1">
+        	<br/>
+              <h4>About Our Team</h4>
+                <table border="0">
+              <tr>
+                <th><img src="../images/our_team/image_placeholder.png" alt="Justin"></th>
+                <th><img src="../images/our_team/image_placeholder.png" alt="Andres"></th>
+                <th><img src="../images/our_team/image_placeholder.png" alt="John"></th>
+              </tr>
+              <tr>
+                <td>Justin Courtney </td>
+                <td>Andres Ruiz</td>
+                <td>John Leavitt</td>
+              </tr>
+              <tr>
+                <td>3rd Yr. Computer Science </td>
+                <td>3rd Yr. Software Engineering </td>
+                <td>3rd Yr. Industrial Design </td>
+              </tr>
+            </table>
             <br/>
             <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+           </div>
         </div> 
     </body>
 </html>
