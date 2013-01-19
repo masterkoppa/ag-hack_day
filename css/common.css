@@ -1,0 +1,77 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+.navbar .brand{
+    font-size: 100px;
+    line-height: 100px;
+}
+
+body{
+    padding-top: 150px;
+}
+
+.center{
+    text-align: center;
+}
+
+.vert_center{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.active{
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgb(255,255,255) 0%, rgb(119,209,255) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,255)), color-stop(100%,rgb(119,209,255))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgb(255,255,255) 0%,rgb(119,209,255) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgb(255,255,255) 0%,rgb(119,209,255) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgb(255,255,255) 0%,rgb(119,209,255) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgb(255,255,255) 0%,rgb(119,209,255) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#77d1ff',GradientType=0 ); /* IE6-9 */
+}
+
+.separator{
+    background-image: url('../Images/page_divider.png');
+    background-repeat: repeat-x;
+}
+
+.separator_down{
+    background-image: url('../Images/page_divider.png');
+    background-repeat: repeat-x;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.bold{
+    font-weight: bold;
+}
+
+@media (min-width: 1200px){
+    body{
+        margin-left: 5%;
+        margin-right: 5%;
+
+        background-image: url('../Images/noise_background.gif');
+        background-repeat: repeat;
+    }
+    .navbar{
+        width: 90%;
+    }
+}
+@media (min-width: 1400px){
+    body{
+        margin-left: 15%;
+        margin-right: 15%;
+
+        background-image: url('../Images/noise_background.gif');
+        background-repeat: repeat;
+    }
+    .navbar{
+        width: 70%;
+    }
+}
