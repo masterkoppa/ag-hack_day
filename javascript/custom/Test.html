@@ -1,0 +1,20 @@
+<html>
+	<head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+		<script type="text/javascript" src="greeting-loader.js"></script>
+	</head>
+	<div id="hash">
+
+	</div>
+	<script type="text/javascript">
+		//var url = "www.aaa.com/task1/1.3.html#a_1";
+		var hash = window.location.hash.substring(1);
+
+		console.log(hash);
+
+		$.post('../../php/getResourceURL.php', {'hash': hash}, function(data){
+			alert(data);
+		});
+	</script>
+</html>
