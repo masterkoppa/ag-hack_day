@@ -11,7 +11,9 @@
         <script src="../bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="../javascript/qrenc3/qr_code.js"></script>
         <script type="text/javascript" src="../javascript/custom/qr_code_bridge.js"></script>
+        <script type="text/javascript" src="../javascript/turn.min.js"></script>
     </head>
+
     <body data-spy="scroll" data-target=".navbar" data-offset="200">
 
         <div class="navbar">
@@ -20,22 +22,22 @@
                 <ul class="nav">
                     <li class="active">
                         <a href="#Home">
-                            <img src="../Images/Navigation/home_btn.png"></img>
+                            <img src="../Images/Navigation/home_btn.png" />
                         </a>
                     </li>
                     <li>
                         <a href="#Samples">
-                            <img src="../Images/Navigation/samples_btn.png"></img>
+                            <img src="../Images/Navigation/samples_btn.png" />
                         </a>
                     </li>
                     <li>
                         <a href="#Card_Shop">
-                            <img src="../Images/Navigation/cardshop_btn.png"></img>
+                            <img src="../Images/Navigation/cardshop_btn.png" />
                         </a>
                     </li>
                     <li>
                         <a href="#Team">
-                            <img src="../Images/Navigation/ourteam_btn.png"></img>
+                            <img src="../Images/Navigation/ourteam_btn.png" />
                         </a>
                     </li>
                 </ul>
@@ -63,7 +65,7 @@
                     </p>
                 </div>
                 <div class="span5" style="padding-top: 5%">
-                    <img src="../Images/Home/welcome_book.png"></img>
+                    <img src="../Images/Home/welcome_book.png" />
                 </div>
             </div>
         </div>
@@ -100,24 +102,24 @@
                     <table>
                         <tr>
                             <td>
-                                <img src="../Images/samples/sample01.png"></img>
+                                <img src="../Images/samples/sample01.png" />
                             </td>
                             <td>
-                                <img src="../Images/samples/sample02.png"></img>
+                                <img src="../Images/samples/sample02.png" />
                             </td>
                             <td>
-                                <img src="../Images/samples/sample03.png"></img>
+                                <img src="../Images/samples/sample03.png" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <img src="../Images/samples/sample04.png"></img>
+                                <img src="../Images/samples/sample04.png" />
                             </td>
                             <td>
-                                <img src="../Images/samples/sample02.png"></img>
+                                <img src="../Images/samples/sample02.png" />
                             </td>
                             <td>
-                                <img src="../Images/samples/sample03.png"></img>
+                                <img src="../Images/samples/sample03.png" />
                             </td>
                         </tr>
                     </table>
@@ -128,74 +130,79 @@
             </div>
         </div>
         <div id="Card_Shop">
-            <div class="row">
-                <div class="span6">
-                    <br>
-                    <p>Hello World</p>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+            <br/>
+            <div id="example_card1">
+                <div id='example_page1' class="page">
+                    <div class="page_border">
+                        <h1 style="position:absolute;left:10px;top:100px;">
+                            Augment your greeting card!
+                        </h1>
+                        <h2 style="position:absolute;left:150px;top:250px;">
+                            CardShare allows you to build to your heart's content...
+                        </h2>
+                        <h3 style="position:absolute;left:10px;top:500px; padding:0px;margin:0px;">
+                            Turn the page and see what you can do! &rarr;
+                        </h3>
+                    </div>
                 </div>
-                <div class="span6 center">
-                    Example Card
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+                <div id='example_page2 'class="page">
+                    <div class="page_border">
+                        <h1 style="position:absolute;left:20px;top:100px;">
+                            Add a picture!
+                        </h1>
+                        <img src="../Images/Desert.jpg" alt="desert" style="position:absolute;left:50px;top:200px;height:300px;width:300px;"/>
+                    </div>
+                </div>
+                <div id='example_page3 'class="page">
+                    <div class="page_border">
+                        <h1 style="position:absolute;left:20px;top:100px;">
+                            Add a video!
+                        </h1>
 
+                        <img src="../Images/john_photo.png" alt="john_photo" style="position:absolute;left:50px;top:200px;height:300px;width:300px;"/>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="span4 offset8">
-                    <img src="../Images/store/Store_btn.png"></img>
-                    <br/>
-                    <br/>
-                    <br/>
+                <div id='example_page4 'class="page">
+                    <div class="page_border">
+                        <h1 style="position:absolute;left:20px;top:100px;">
+                            Add a song!
+                        </h1>
+
+                        <img src="../Images/audio_thm.png" alt="audio player" style="position:absolute;left:50px;top:200px;"/>
+                    </div>
+                </div>
+                <div id='example_page5 'class="page">
+                    <div class="page_border">
+                        <h1 style="position:absolute;left:20px;top:100px;">
+                            And much, much more...
+                        </h1>
+                    </div>
+                </div>
+                <div id='example_page6' class="page">
+                    <div class="page_border">
+                        <h1 style="position:absolute;left:20px;top:100px;">
+                            With CardShare!
+                        </h1>
+                    </div>
                 </div>
             </div>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class="pull-right">
+            <img src="../Images/store/Store_btn.png" />
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
         <div id="Team">
 
             <div class="separator">
@@ -247,6 +254,7 @@
         <script type="text/javascript">
             $(function(){
                 insertQRCode("HelloWorld", $("#qr_code"));
+                $('#example_card1').turn({acceleration:true,gradients:true,display:'double'});
             });
         </script>
     </body>
