@@ -1,12 +1,14 @@
+/**
+Gets the resource url from the database based on this page's url
+*/
+function getResourceURL(){}
+	var hash = window.location.hash.substring(1);
 
+	var resourceURL = "";
 
-function getCard(user, cardID){
+	console.log(hash);
 
-	if(user == 'a'){
-		return '/html/resources/users/a/' + cardID + '.html'
-	}else if(user == 'b'){
-		return '/html/resources/users/b/' + cardID + '.html'
-	}else{
-		alert("ERROR");
-	}
+	$.post('../../php/getResourceURL.php', {'hash': hash}, function(data){
+		resourceURL = data;
+	});
 }
