@@ -157,7 +157,14 @@ function drag(ev)
 {
     var x = ev.clientX;
     var y = ev.clientY;
-    ev.dataTransfer.setData("text/plain", x + "," + y + "," + ev.target.id);
+    if(ev.target.id == "")
+    {
+        ev.dataTransfer.setData("text/plain", x + "," + y + "," + ev.target.parentNode.id);
+    }
+    else
+    {
+        ev.dataTransfer.setData("text/plain", x + "," + y + "," + ev.target.id);
+    }
 }
 
 // Function to allow drop in certain areas (mainly, the card area)
