@@ -57,7 +57,7 @@ body{
     }
     .navbar{
         width: 90%;
-    }
+          }
 }
 @media (min-width: 1400px){
     body{
