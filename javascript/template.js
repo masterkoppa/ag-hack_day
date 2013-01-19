@@ -151,6 +151,43 @@ function getPageNum()
     return page_num;
 }
 
+// Function to be called when dragging an element
+function drag(ev)
+{
+    var off_set = $("#"+ev.target.id).offset();
+    var x = off_set.left;
+    var y = off_set.top;
+    ev.dataTransfer.setData("text/plain", x + "," + y + "," + ev.target.id);
+}
+
+// Function to allow drop in certain areas (mainly, the card area)
+function allowDrop(ev)
+{
+    ev.preventDefault();
+}
+
+// Function to be called on drop
+function drop(ev)
+{
+    ev.preventDefault();
+    var info = ev.dataTransfer.getData("text/plain").split(",");
+    var el = document.getElementById(info[2]);
+    if(! el.style.left && ! el.style.top)
+    {
+        el.style.left = Math.abs(ev.clientX - parseInt(info[0], 10)) + "px";
+        el.style.top = Math.abs(ev.clientY - parseInt(info[1], 10)) + "px";
+        alert(info[0] + " " + info[1]);
+    }
+    else
+    {
+        var leftcoord = el.style.left.substring(0, el.style.left.length - 2);
+        var topcoord = el.style.top.substring(0, el.style.top.length - 2);
+        alert(info[0] + " " + info[1]);
+        el.style.left = Math.abs(ev.clientX - (parseInt(info[0]) + parseInt(leftcoord, 10))) + "px";
+        el.style.top = Math.abs(ev.clientY - (parseInt(info[1]) + parseInt(topcoord, 10))) + "px";
+    }
+}
+
 // Run once the DOM is ready
 $(function () {
     // Member elements for easy access
