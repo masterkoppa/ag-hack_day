@@ -174,10 +174,15 @@
                 </div>
             </div>
         </div>
-        <div class="pagination">
-            
-        </div>
+        
             </div>
+        </div>
+        <div class="pagination center">
+            <ul>
+                <li><a href="#" onclick="page_left()">Prev</a></li>
+                <li><a href="#" onclick="updatePageNum(1)">1</a></li>
+                <li><a href="#" onclick="page_right()">Next</a></li>
+            </ul>
         </div>
         <div id="config_area" align="center">
             <span id="page_num_label">Page number to edit: </span>
@@ -224,12 +229,11 @@
                         .append('<img class="media_item" src="../php/files/' + file.name 
                         + '" height="200" width="200" ></img>')
                     }else if(file.type.indexOf("audio") != -1){
-                        $("#page_media").append('<audio controls><source src="../php/files/' + file.name + '" type=audio/wav>Your browser does not support the audio element</audio>');
+                        $("#page1_media").append('<audio controls><source src="../php/files/' + file.name + '" type="audio/wav">Your browser does not support the audio element</audio>');
                     }else if(file.type.indexOf("video") != -1){
-                        $("#page_media").append('<video width="200" height="200" controls><source src="../php/files/' + file.name 
-                        + '" type=video/webm> Your Browser Does not Support the video tag</video>');
+                        $("#page1_media").append('<video width="200" height="200" controls><source src="../php/files/' + file.name 
+                        + '" type="video/webm"> Your Browser Does not Support the video tag</video>');
                     }
-                    
                 });
             },
             progressall: function (e, data) {
